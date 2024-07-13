@@ -1,0 +1,79 @@
+# Sistema operativo
+###################
+.DS_Store
+Thumbs.db
+
+# Archivos de Logs
+###################
+*.log
+
+# Archivos Temporales
+#####################
+*.tmp
+*.swp
+
+# Archivos de Backup
+####################
+*.bak
+*.old
+*.orig
+
+# Archivos de compilación
+#########################
+*.class
+*.o
+*.so
+*.dll
+*.exe
+
+# Archivos comprimidos
+######################
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.gz
+*.bz2
+
+# Python
+########
+venv/
+.env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Node.js
+#########
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+tmp/
+temp/
+dist/
+build/
+
+# Java
+######
+target/
+*.class
+
+# C/C++
+########
+*.o
+*.obj
+*.so
+*.exe
+*.dll
+
+# Configuración de IDEs
+#######################
+.vscode/
+.idea/
+*.iml

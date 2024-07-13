@@ -1,0 +1,25 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<div class="mt-5">
+    <h1>Dashboard de {{ personal.nombre }}</h1>
+    <div id="chart-container" style="height: 400px; width: 100%;"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('chart-container').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [{% for indicador in indicadores %}'{{ indicador.fecha }}',{% endfor %}],
+            datasets: [{
+                label: 'Indicadores',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [{% for indicador in indicadores %}{{ indicador.valor }},{% endfor %}]
+            }]
+        },
+        options: {}
+    });
+</script>
+{% endblock %}

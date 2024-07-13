@@ -1,0 +1,32 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<div class="mt-5">
+    <h1>Perfil de {{ personal.nombre }} {{ personal.apellido }}</h1>
+    <p>Edad: {{ personal.edad }}</p>
+    <p>Dirección: {{ personal.direccion }}</p>
+    <p>Sucursal: {{ personal.sucursal.nombre }}</p>
+    <img src="{{ personal.foto.url }}" alt="Foto de {{ personal.nombre }}" class="img-thumbnail" style="max-width: 200px;">
+</div>
+<div class="mt-5">
+    <h2>Indicadores</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre del KPI</th>
+                <th>Valor</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for indicador in indicadores %}
+            <tr>
+                <td>{{ indicador.kpi.nombre }}</td>
+                <td>{{ indicador.valor }}</td>
+                <td>{{ indicador.fecha }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
